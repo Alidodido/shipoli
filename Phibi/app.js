@@ -14,5 +14,10 @@ window.addEventListener("mousemove", (event) => {
     if (delayCounter % 5 == 0) {
         mousePos = { x: event.clientX, y: event.clientY };
         placeDiv(shape, mousePos.x, mousePos.y);
+        if (shape.offsetTop < window.innerHeight / 2) {
+            shape.classList.add("active");
+        } else {
+            shape.classList.remove("active");
+        }
     }
 });

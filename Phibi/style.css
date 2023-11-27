@@ -12,6 +12,10 @@ body {
     rotate: -10deg;
 }
 
+#shape.active {
+    rotate: 10deg;
+    background-color: #9ADE7B;
+}
 
 #shape::before {
     position: absolute;
@@ -35,6 +39,15 @@ body {
     scale: 2;
 }
 
+#shape.active::before {
+    scale: 1.4;
+    z-index: 10;
+    opacity: 0.8;
+    width: 80%;
+    
+    top: calc(50% + 30px);
+    left: calc(50% + 30px);
+}
 
 #shape .leg {
     width: 5px;
