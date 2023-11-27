@@ -1,0 +1,62 @@
+body {
+    background-color: #efefef;
+}
+
+#shape {
+    width: 50px;
+    height: 50px;
+    background-color: #de7b7b;
+    transition: 0.25s ease-out;
+    border-radius: 10px;
+    position: relative;
+    rotate: -10deg;
+}
+
+
+#shape::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+#shape::before {
+    z-index: 10;
+    opacity: 0.3;
+    width: 80%;
+    scale: 2;
+}
+
+
+#shape .leg {
+    width: 5px;
+    height: 10px;
+    background-color: inherit;
+    position: absolute;
+    bottom: -8px;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+#shape .leg.leg1 {
+    left: 20%;
+}
+
+#shape .leg.leg2 {
+    right: 20%;
+}
+#shape .leg.legtop {
+    bottom: auto;
+    top: -5px;
+    left: 50%;
+    width: 10px;
+    transform: translateX(-50%);
+}
