@@ -4,7 +4,6 @@ function placeDiv(d, x_pos, y_pos) {
     d.style.top = y_pos + "px";
 }
 
-const mousePosText = document.getElementById("mouse-pos");
 let mousePos = { x: undefined, y: undefined };
 let shape = document.getElementById("shape");
 let delayCounter = 0;
@@ -21,3 +20,19 @@ window.addEventListener("mousemove", (event) => {
         }
     }
 });
+
+var defaultMod = 1;
+var body = document.body;
+var changeModButton = document.getElementById("changeModer");
+
+function changeMod(){
+    defaultMod *= -1;
+
+    if(defaultMod==1){
+        body.style.background= "#efefef";
+        changeModButton.innerHTML = "🌞";
+    }else{
+        body.style.background = "black";
+        changeModButton.innerHTML = "🌚";
+    }
+}
