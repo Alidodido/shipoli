@@ -1,8 +1,51 @@
-body {
-    background-color: #efefef;
+* {
+    cursor: none;
 }
 
-button{
+body {
+    background-color: #efefef;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    overflow: hidden;
+}
+
+body::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #575757;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: 1s ease-out;
+    -webkit-transition: 1s ease-out;
+    -moz-transition: 1s ease-out;
+    -ms-transition: 1s ease-out;
+    -o-transition: 1s ease-out;
+}
+
+body.dark::before {
+    background-color: #0e0e0e;
+    width: 2000px;
+    height: 2000px;
+    aspect-ratio: 1/1;
+}
+
+button {
+    user-select: none;
     background-color: transparent;
     border: transparent;
     font-size: 36px;
@@ -78,4 +121,24 @@ button{
     left: 50%;
     width: 10px;
     transform: translateX(-50%);
+
+/* coursor */
+#follower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#follower #circle {
+    position: absolute;
+    background-color: #000000;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    margin-top: 0em;
+    margin-left: 0em;
+}
+
+body.dark #follower #circle {
+    background-color: #fff;
 }
