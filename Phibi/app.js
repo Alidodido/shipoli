@@ -25,17 +25,17 @@ var defaultMod = 1;
 var body = document.body;
 var changeModButton = document.getElementById("changeModer");
 
-function changeMod(){
+function changeMod() {
     defaultMod *= -1;
 
-    if(defaultMod==1){
-        body.style.background= "#efefef";
+    body.classList.toggle('dark');
+    if (defaultMod == 1) {
         changeModButton.innerHTML = "🌞";
-    }else{
-        body.style.background = "black";
+    } else {
         changeModButton.innerHTML = "🌚";
     }
 }
+
 // coursor
 (function () {
     var follower, init, mouseX, mouseY, positionElement, timer;
